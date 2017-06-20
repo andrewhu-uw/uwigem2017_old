@@ -1,27 +1,5 @@
-import pigpio as GPIO # Allows us to control the Pi's GPIO Pins
-import time # Allows us to "sleep" (pause) code execution for a given time
-
-# Some global "tuples"
-# A tuple is a python data structure that holds nested lists of values.
-# Tuples are immutable (they cannot be changed after they are declared)
-fullStepSequence = (
-  (1, 0, 0, 0),
-  (0, 1, 0, 0),
-  (0, 0, 1, 0),
-  (0, 0, 0, 1)
-)
-
-
-halfStepSequence = (
-  (1, 0, 0, 0),
-  (1, 1, 0, 0),
-  (0, 1, 0, 0),
-  (0, 1, 1, 0),
-  (0, 0, 1, 0),
-  (0, 0, 1, 1),
-  (0, 0, 0, 1),
-  (1, 0, 0, 1)
-)
+import RPi.GPIO as GPIO
+import time
 
 GPIO.setmode(GPIO.BCM)
 
@@ -37,7 +15,7 @@ GPIO.setup(coil_A_2_pin, GPIO.OUT)
 GPIO.setup(coil_B_1_pin, GPIO.OUT)
 GPIO.setup(coil_B_2_pin, GPIO.OUT)
 
-GPIO.output(enable_pin, 0)
+GPIO.output(enable_pin, 1)
 
 def forward(delay, steps):  
   for i in range(0, steps):
@@ -69,8 +47,8 @@ def setStep(w1, w2, w3, w4):
   GPIO.output(coil_B_2_pin, w4)
 
 while True:
-  delay = raw_input("Delay between steps (milliseconds)?")
-  steps = raw_input("How many steps forward? ")
+  delay = input("Delay between steps (milliseconds)?")
+  steps = input("How many steps forward? ")
   forward(int(delay) / 1000.0, int(steps))
-  steps = raw_input("How many steps backwards? ")
+  steps = input("How many steps backwards? ")
   backwards(int(delay) / 1000.0, int(steps))
