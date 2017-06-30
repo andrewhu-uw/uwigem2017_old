@@ -7,7 +7,7 @@ sudo apt-get upgrade
 # Install misc useful things
 sudo apt-get -y install c++11 emacs python-dev python-rpi.gpio gedit;
 sudo apt-get -y install python-smbus synaptic gnome-system-monitor git git-gui git-cola maven
-sudo pip install wiringpi2
+sudo pip install wiringpi2 gnome-system-tools eclipse
 export PATH=$PATH:/opt/pi4j/lib/
 
 
