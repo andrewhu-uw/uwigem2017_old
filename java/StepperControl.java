@@ -12,50 +12,33 @@ public class StepperControl {
 	// Create a GPIO controller instance
 	final GpioController gpio = GpioFactory.getInstance();	
 	
-	// Configure GPIO pins for output	
-	//GpioPinDigitalOutput testPin2 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04,"stepPin",PinState.LOW);
-	GpioPinDigitalOutput dirPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04,"dirPin",PinState.LOW);
-	//GpioPinDigitalOutput stepPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05,"stepPin",PinState.LOW);
-	int numSteps = 100;
-	int pulseWidth = 20; // Microseconds
-	int timeBetweenSteps = 25; // Milliseconds
+	// Try to create a software PWM pin output
+	GpioPinDigitalOutput pin12 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_26,"pin12");
+	GpioPinDigitalOutput pinDir = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06,"pinDir");
 	
-	dirPin.high();/*
-	for(int n = 0; n < numSteps; n++) {
-	    stepPin.high();
-	    Thread.sleep(timeBetweenSteps);
-	    stepPin.low();
-	    Thread.sleep(timeBetweenSteps);
+
+	int i = 0;
+	pinDir.high();
+	while(true){
+	    System.console().readLine();
 	    
-	}
+	    if(i==0)
+		{
+		    System.out.println("Pin 12 High");
+		    pin12.high();
+		    i = 1;
+		}
+	    else
+		{	
+		    System.out.println("Pin 12 Low");
+		    pin12.low();
+		    i = 0;
+		    }
 
-	dirPin.low();
-	for(int n = 0; n < numSteps; n++) {
-	    stepPin.high();
-	    Thread.sleep(timeBetweenSteps);
-	    stepPin.low();
-	    Thread.sleep(timeBetweenSteps);
-	    
-	}
-	    
-	*/
-
-
-	Pin stepPin2 = RaspiPin.GPIO_23;
-	GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(stepPin2);
-
-        // you can optionally use these wiringPi methods to further customize the PWM generator
-        // see: http://wiringpi.com/reference/raspberry-pi-specifics/
-        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
-        com.pi4j.wiringpi.Gpio.pwmSetRange(1000);
-        com.pi4j.wiringpi.Gpio.pwmSetClock(500);
-
-        // set the PWM rate to 500
-	pwm.setPwm(500);
-	
-	Thread.sleep(10000);
-	
-
-	
+	    /*Thread.sleep(100);
+		pin12.high();
+	    Thread.sleep(100);
+	    pin12.low();*/
+	}	
     }
 }
