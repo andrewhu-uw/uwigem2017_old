@@ -1,0 +1,19 @@
+This is intended to be used as an introduction to the version control system,
+git, as well as its popular repository hosting website/client, Github.
+
+-----Useful Links-----
+
+https://desktop.github.com/
+Desktop Github client. If it doesn't automatically download git, check the link below
+
+https://git-scm.com/download/win
+Download git-for-windows, comes with git as well as some useful tools
+
+https://try.github.io
+Try Github, lets you experiment with git in a sterile environment
+
+https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+Git cheat-sheet, basic command explanations all in one place
+
+-----FAQs-----
+
