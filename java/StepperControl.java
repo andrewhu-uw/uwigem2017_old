@@ -17,12 +17,10 @@ public class StepperControl {
 	GpioPinDigitalOutput pinDir = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06,"pinDir");
 	
 
-	int i = 0;
 	pinDir.high();
-	while(true){
-	    System.console().readLine();
+	for(int i = 0; i <  500; i ++){
 	    
-	    if(i==0)
+	    /* if(i==0)
 		{
 		    System.out.println("Pin 12 High");
 		    pin12.high();
@@ -33,12 +31,34 @@ public class StepperControl {
 		    System.out.println("Pin 12 Low");
 		    pin12.low();
 		    i = 0;
-		    }
+		    }*/
 
-	    /*Thread.sleep(100);
+	    Thread.sleep(1);
 		pin12.high();
-	    Thread.sleep(100);
-	    pin12.low();*/
-	}	
+	    Thread.sleep(1);
+	    pin12.low();
+	}
+        pinDir.low();
+
+	for(int i = 0; i <  500; i ++){
+	    
+	    /* if(i==0)
+		{
+		    System.out.println("Pin 12 High");
+		    pin12.high();
+		    i = 1;
+		}
+	    else
+		{	
+		    System.out.println("Pin 12 Low");
+		    pin12.low();
+		    i = 0;
+		    }*/
+
+	    Thread.sleep(1);
+		pin12.high();
+	    Thread.sleep(1);
+	    pin12.low();
+	}
     }
 }

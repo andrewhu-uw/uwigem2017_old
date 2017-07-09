@@ -6,24 +6,26 @@ import com.pi4j.util.Console;
 
 public class Blink {
     public static void main(String args[]) 
-    throws InterruptedException {
-        System.out.println("Hello world! This is AcaiBerry!");
+    throws Exception {
+        System.out.println("Blink program is running. Press a key to terminate.");
 
 	// Create a GPIO controller instance
 	final GpioController gpio = GpioFactory.getInstance();	
 	
 	// Configure GPIO pins for output	
-	GpioPinDigitalOutput ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_24,"dirPin",PinState.LOW);
+	GpioPinDigitalOutput ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_22,"dirPin",PinState.HIGH);
 
-	ledPin.high();
 	
-	while(true) {
-	Thread.sleep(1000);
-	ledPin.low();
-	Thread.sleep(1000);
-	ledPin.high();
-	
+	while(System.in.available() == 0) {
+	    System.out.print("Off...");
+	    ledPin.low();
+	    Thread.sleep(1000);
+	    System.out.print("On...");
+	    ledPin.high();
+	    Thread.sleep(1000);
 	}
+
+	System.out.println("\n\nBlink program terminated.");
 	
     }
 }
