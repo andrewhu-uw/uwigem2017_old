@@ -6,8 +6,6 @@ import com.pi4j.io.gpio.*;
 import com.pi4j.util.CommandArgumentParser;
 import com.pi4j.util.Console;
 
-//if this comment is here, then I can push to github from NetBeans
-
 public class Blink {
     public static void main(String args[]) 
     throws Exception {
