@@ -22,12 +22,12 @@ public class Turbidostat extends Application {
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText("Test asynchronous console output");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                System.out.println("Console output!\n");
             }
         });
         
@@ -36,7 +36,7 @@ public class Turbidostat extends Application {
         
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Turbidostat Control");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
