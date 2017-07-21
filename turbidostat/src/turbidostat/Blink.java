@@ -19,6 +19,7 @@ public class Blink {
 	// Configure GPIO pins for output	
 	GpioPinDigitalOutput ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_22,"dirPin",PinState.HIGH);
 
+        /* This is a different line */
 	
 	while(System.in.available() == 0) {
 	    System.out.print("Off...");
