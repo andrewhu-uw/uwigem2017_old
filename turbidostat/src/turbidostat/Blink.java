@@ -6,6 +6,7 @@ import com.pi4j.io.gpio.*;
 import com.pi4j.util.CommandArgumentParser;
 import com.pi4j.util.Console;
 
+<<<<<<< HEAD
 //if this comment is here, then I can push to github from NetBeans
 //so can I
 public class Blink {
