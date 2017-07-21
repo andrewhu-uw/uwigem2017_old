@@ -7,6 +7,7 @@ import com.pi4j.util.CommandArgumentParser;
 import com.pi4j.util.Console;
 
 //if this comment is here, then I can push to github from NetBeans
+//Just leave a comment here :D
 
 public class Blink {
     public static void main(String args[]) 
