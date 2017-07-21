@@ -6,9 +6,14 @@ import com.pi4j.io.gpio.*;
 import com.pi4j.util.CommandArgumentParser;
 import com.pi4j.util.Console;
 
+<<<<<<< HEAD
 //if this comment is here, then I can push to github from NetBeans
+<<<<<<< HEAD
 //Just leave a comment here :D
 
+=======
+//so can I
+>>>>>>> 94720f543ee41c1cd3be6c5497e041b01a9a4aa4
 public class Blink {
     public static void main(String args[]) 
     throws Exception {
