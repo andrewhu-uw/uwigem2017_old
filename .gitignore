@@ -4,3 +4,4 @@
 /turbidostat/dist/
 turbidostat/nbproject/private/private.properties
 syringepump/nbproject/private/private.properties
+*.properties
