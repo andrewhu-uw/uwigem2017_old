@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 //HELP_ I don't know what I'm doing
-=======
 // William Comment
->>>>>>> acd09fdcfcec425d7055293ad8afa9617472c6f8
 // iGEM Team Washington
 // SyringePump controller
 // This program allows the user to control a single syringe pump
