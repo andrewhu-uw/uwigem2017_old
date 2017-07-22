@@ -1,6 +1,9 @@
+// William Comment
 // iGEM Team Washington
 // SyringePump controller
 // This program allows the user to control a single syringe pump
+// hello -krithi
+
 package syringepump;
 
 import java.util.Scanner;
