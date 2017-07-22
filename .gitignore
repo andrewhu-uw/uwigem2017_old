@@ -3,5 +3,27 @@
 /turbidostat/build/
 /turbidostat/dist/
 turbidostat/nbproject/private/private.properties
+<<<<<<< HEAD
 syringepump/nbproject/private/private.properties
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+turbidostat/nbproject/private/private.properties
+=======
+>>>>>>> c658fa224c2fad853345485b290a1d5183f2b712
+>>>>>>> e08ff6fcf2a16e9dc41645c9858e375518e38dfa
+turbidostat/nbproject/private/private.properties
+turbidostat/nbproject/private/private.properties
+>>>>>>> e08ff6fcf2a16e9dc41645c9858e375518e38dfa
+turbidostat/nbproject/private/private.properties
+<<<<<<< HEAD
+=======
+turbidostat/nbproject/private/private.properties
+turbidostat/nbproject/private/private.properties
+turbidostat/nbproject/private/private.properties
+>>>>>>> 2a0873b35c941a3fc7061d94f0f1f2b28486551a
+*.properties
+>>>>>>> b8ec07cf3e703b0676d322f1a751b1627def69c9
+*.properties
 *.properties
